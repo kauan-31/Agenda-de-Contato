@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agenda de Contatos</h1>
+        
+        <div class="stats">
+            <p>Total de contatos: <span id="totalContatos">0</span></p>
+        </div>
+
+        <div class="filtro-section">
+            <label for="filtro">Filtrar contatos:</label>
+            <input type="text" id="filtro" placeholder="Digite o nome para filtrar...">
+        </div>
+
+        <div class="form-section">
+            <h2>Cadastrar Novo Contato</h2>
+            <form id="contatoForm">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" required>
+                </div>
+                <button type="submit" id="btnSalvar">Salvar Contato</button>
+                <button type="button" id="btnCancelar" class="cancel-btn" style="display: none;">Cancelar</button>
+            </form>
+        </div>
+
+        <div class="tabela-section">
+            <h2>Lista de Contatos</h2>
+            <table id="tabelaContatos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    <!-- Os contatos serão inseridos aqui via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
